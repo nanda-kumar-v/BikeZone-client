@@ -1,0 +1,256 @@
+/* page two */
+
+.page-2 {
+  width: 100%;
+  height: 105vh;
+  overflow-y: hidden;
+  position: relative;
+  margin-top: -50px;
+}
+
+.page-2-bg {
+  background-color: #fcf7de;
+  width: 750px;
+  height: 600px;
+  border-radius: 250px;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: 90px;
+  left: -70px;
+  overflow: hidden;
+}
+
+.page-2-images {
+ 
+  width: 475px;
+  transform: rotate(20deg);
+  margin-left: 200px;
+  margin-top: -180px;
+  display: flex;
+}
+
+.page-2-img-1 {
+  width: 200px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+#img-1 {
+  border-radius: 100px 100px 0px 100px;
+}
+
+.page-2-img-1 h1 {
+  width: 50px;
+  height: 180px;
+  background-color: #f9c935;
+  border-radius: 20px 0px 20px 20px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.page-2-img-2 {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.page-2-img-2 img {
+  width: 270px;
+  margin-top: -20px;
+  border-radius: 0px 80px 80px 80px;
+}
+
+.page-2-img-2 h1 {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border-radius: 25px 25px 25px 0px;
+  margin-bottom: 50px;
+}
+
+ #img-2 {
+  border-radius: 0px 80px 80px 80px;
+}
+
+/* page two text */
+
+.page-2-text {
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 705px;
+  margin-top: -10px;
+  justify-content: center;
+}
+
+.page-2-text h1 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.page-2-text p {
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  color: #525050;
+  line-height: 31px;
+  margin-top: 20px;
+}
+
+.page-2-text h1::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #f9c935;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+}
+
+.page-2-text button {
+  padding: 20px 30px;
+  border-radius: 25px 25px 25px 0px;
+  font-size: 17px;
+  background-color: #f9c935;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 250px;
+  margin-top: 20px;
+}
+
+/* page two end */
+
+.page-6 {
+  width: 100%;
+  height: 105vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ( page_six_text )  */
+
+.page-6-text {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  justify-content: center;
+}
+
+.page-6-text p {
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  color: #525050;
+  line-height: 31px;
+}
+
+.page-6-text h1 {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+  /* font-weight: 700;
+  font-weight: bolder;
+} */
+
+.page-6-text h1::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #f9c935;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+}
+
+.page-6-text button {
+  padding: 20px 30px;
+  border-radius: 25px 25px 25px 0px;
+  font-size: 17px;
+  background-color: #f9c935;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 250px;
+  margin-top: 15px;
+}
+
+/* page 6 image styling */
+
+.page-6-bg {
+  background-color: #fcf7de;
+  width: 850px;
+  height: 520px;
+  border-radius: 250px;
+  transform: rotate(20deg);
+  z-index: -1;
+  margin-left: 800px;
+  position: absolute;
+  top: 90px;
+  left: -200px;
+}
+
+.page-6-images {
+  height: 850px;
+  width: 500px;
+  transform: rotate(-20deg);
+  margin-left: 10px;
+  margin-top: -250px;
+  display: flex;
+}
+
+.page-6-image1 {
+  width: 100%;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+#page-6 {
+  border-radius: 100px 100px 0px 100px;
+}
+
+.page-6-image1 h2 {
+  width: 50px;
+  height: 180px;
+  background-color: #f9c935;
+  border-radius: 20px 0px 20px 20px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.page-6-image2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.page-6-image2 img {
+  width: 270px;
+  border-radius: 0px 150px 150px 150px;
+}
+
+.page-6-image2 h2 {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border-radius: 25px 25px 25px 0px;
+  margin-bottom: 50px;
+}
+
+/* page 6 end */
+

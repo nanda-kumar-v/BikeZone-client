@@ -1,0 +1,161 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<!-- main page designing-->
+
+<div class="heropage">
+  <div class="page-One-bgimg">
+    <div class="page-One-img">
+      <img src="../../assets/bike.webp"/>
+    </div>
+  </div>
+
+  <!-- page one  -->
+
+  <div class="page-1-text">
+    <h1>India’s largest bike <br />taxi service</h1>
+    <p>
+      BikeZone is India’s first and fastest-growing<br />
+      Bike taxi app with a whopping 25 Million+<br />
+      app downloads. We are now running<br />
+      operations in more than 100 cities.
+    </p>
+    <div class="page-1-btn">
+      <button
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Get Fare
+      </button>
+      <button routerLink="/register" id="black-btn">Sing-up as Driver</button>
+    </div>
+  </div>
+</div>
+
+<!-- get fare model -->
+
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(24, 24, 106)">
+        <h1
+          class="modal-title fs-5"
+          style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            color: white;
+          "
+          id="staticBackdropLabel"
+        >
+          GET FARE 
+        </h1>
+        <div class="getfareimg">
+          <img class="getfareimg" src="../../assets/rapido logo.png" height="50px" width="100px">
+        </div>
+        <button
+          type="button"
+          class="closebtn" 
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ><i class="fa-solid fa-rectangle-xmark" style="color: #e00b0b;"></i></button>
+      </div>
+      
+      <div class="modal-body" style="background-color: rgb(239, 216, 101)">
+        <form [formGroup]="fareForm">
+          <label for="exampleInputEmail1" class="form-label"
+            >Starting Location</label
+          >
+          <input
+            type="text"
+            name="splace"
+            formControlName="splace"
+            class="form-control"
+            id="splace"
+            placeholder="Enter Starting Location"
+          />
+          <!-- starting location validation -->
+          <div
+            *ngIf="
+              this.fareForm.get('splace')?.touched &&
+              this.fareForm.get('splace')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter Your Starting Point
+          </div>
+
+          <label for="exampleInputEmail1" class="form-label mt-3"
+            >Destination</label
+          >
+          <input
+            type="text"
+            name="eplace"
+            formControlName="eplace"
+            class="form-control"
+            id="eplace"
+            placeholder="Enter Destination Location"
+          />
+          <!-- desitination validation -->
+          <div
+            *ngIf="
+              this.fareForm.get('eplace')?.touched &&
+              this.fareForm.get('eplace')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter Destination Point
+          </div>
+
+          <label for="exampleInputEmail1" class="form-label mt-3"
+            >Total Kilometers</label
+          >
+          <input
+            type="number"
+            name="km"
+            formControlName="km"
+            class="form-control"
+            id="km"
+            placeholder="Enter Distance Between Them"
+            (click)="kmChange()"
+          />
+          <!-- km validation -->
+          <div
+            *ngIf="
+              this.fareForm.get('km')?.touched &&
+              this.fareForm.get('km')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter The Distance
+          </div>
+        </form>
+      </div>
+      <div
+        class="modal-footer justify-content-center"
+        style="background-color: rgb(24, 24, 106)"
+      >
+        <button type="button" class="btn btn-success" (click)="getFare()">
+          <span *ngIf="isFare">Get Fare</span>
+          <span *ngIf="!isFare">Fare: ₹{{ fare }}</span>
+        </button>
+        <button class="btn btn-danger" (click)="resetFare()">Reset</button>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+
+<footer>
+  <app-footer></app-footer>
+</footer>

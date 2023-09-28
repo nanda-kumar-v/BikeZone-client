@@ -1,0 +1,136 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<!-- safety page -->
+
+<div class="safety-page">
+  <div>
+    <h1>Safety for all.</h1>
+    <p>
+      At BikeZone, the well-being of our customers is<br />
+      above everything else. We are constantly in<br />
+      pursuit of enhancing our safety measures to<br />
+      ensure every Rapido ride is a pleasant and<br />
+      comfortable experience.
+    </p>
+    <P class="collapse" id="collapseExample3">
+      All rides are insured. Accidental coverage and <br />
+      medical benefitscovered up to Rs 5 Lakh for the <br />
+      Captain & family.By leveraging the latest safety <br/>
+      technologies and onboarding / trainingprocess for <br/>
+      our Captains. 
+    </P>
+
+    <div class="safety-btn">
+      <button (click)="toggle()" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseExample3"
+      aria-expanded="false"
+      aria-controls="collapseExample3" >Know <span *ngIf="!toggleread">More</span>
+        <span *ngIf="toggleread"> Less</span></button>
+    </div>
+  </div>
+  <div class="safety-img">
+    <img
+      src="../../assets/safety image.jpg"
+      alt=""
+    />
+  </div>
+</div>
+
+<!-- safety page end -->
+
+<!-- Our Impact -->
+
+<div class="page-3">
+  <div class="page-3-circle">
+    <h1>Our Impact</h1>
+    <p>
+      Our presence in the country has changed the concept of intra-city travel
+      and <br />
+      made last-mile connectivity affordable for all.
+    </p>
+
+    <div class="page-3-img">
+      <div class="page-3-images">
+        <img src="../../assets/page 3 download img.webp" />
+        <h3>25M</h3>
+        <p>Downloads</p>
+      </div>
+      <div class="page-3-images">
+        <img src="../../assets/page 3 cities.webp" />
+        <h3>100+</h3>
+        <p>Cities</p>
+      </div>
+      <div class="page-3-images">
+        <img src="../../assets/page 3 captains.webp" />
+        <h3>1 + M</h3>
+        <p>Captains</p>
+      </div>
+      <div class="page-3-images">
+        <img src="../../assets/page 3 customers.webp" />
+        <h3>10 + M</h3>
+        <p>Customers</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Our Impact End -->
+
+<!-- whats in it for you -->
+
+<div class="page-4">
+  <div class="page-4-text">
+    <h1>What's in it for you</h1>
+    <div class="page-4-btn">
+      <button id="ColorY">Customers</button>
+      <button id="ColorW">Captains</button>
+    </div>
+  </div>
+
+  <!-- page four boxes -->
+
+  <div class="page-4-all boxes">
+    <div class="page-4-boxes" id="page-4-all-boxes">
+      <div class="page-4-hide">
+        <div class="page-4-box">
+          <img src="../../assets/page 4 box Zero Pressure Rides.webp" />
+          <h2>Doorstep Pick-Up</h2>
+          <p>
+            We will pick you up from where you are <br />
+            and drop you exactly where you need to <br />
+            be.
+          </p>
+        </div>
+
+        <div class="page-4-box">
+          <img src="../../assets/page 4 affordability.webp" />
+          <h2>Affordability</h2>
+          <p>
+            No more latent prices and shocked <br />
+            reactions after seeing the final ride cost. <br />
+            We're here with the most affordable rides <br />
+            for all.
+          </p>
+        </div>
+
+        <div class="page-4-box">
+          <img src="../../assets/page 4 quick ride.webp" />
+          <h2>Quick Ride</h2>
+          <p>
+            Trend setters of smart commute be it <br />
+            traffic or rush hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- page 4 end -->
+
+  <!-- footer -->
+  <footer>
+    <app-footer></app-footer>
+  </footer>

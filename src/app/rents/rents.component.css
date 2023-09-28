@@ -1,0 +1,72 @@
+.safety-page {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 50px;
+    /* height: 700px;
+    margin-left: 80px;
+    margin-top: -150px;
+  */
+  }
+  
+  .safety-page h1 {
+    margin-top: 100px;
+    font-size: 60px;
+    font-weight: 540;
+    color: black;
+  }
+  
+  .safety-page p {
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: black;
+    line-height: 31px;
+    margin-top: 30px;
+  }
+  
+  .safety-btn {
+    margin-top: 30px;
+  }
+  
+  .safety-btn button {
+    padding: 15px 25px;
+    border-radius: 25px 25px 25px 0px;
+    font-size: 17px;
+    background-color: #f9c935;
+    color: black;
+    border: none;
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #black-btn {
+    border-radius: 25px 25px 0px 25px;
+    background-color: black;
+    color: white;
+  }
+  
+  .safety-img{
+    padding-top: 50px;
+    margin-left: 60px;
+  }
+
+  /* login modal */
+
+  .modal-footer a{
+    text-decoration: underline;
+    color: aqua;
+    cursor: pointer;
+  }
+
+  /* signUp Modal */
+  
+  .closebtn{
+    border: none;
+    padding: 0;
+    background-color: rgb(24, 24, 106);
+    font-size:30px;
+  }
+  

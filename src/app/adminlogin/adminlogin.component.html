@@ -1,0 +1,89 @@
+<!-- header design -->
+
+<div class="navbar-sticky" id="navbar">
+  <div class="navbar">
+    <img src="../../assets/rapido logo.png" />
+    <h2 style="font-weight: bolder">ADMIN LOGIN</h2>
+    <button routerLink="/">BACK</button>
+  </div>
+</div>
+
+<!-- admin login design -->
+
+<div
+  class="admin mt-3 d-flex justify-content-center align-items-center" 
+  style="height: 70vh; background-color: rgb(24, 24, 106); margin-inline: 180px;"
+>
+  <div class="container p-5 d-flex" style="background-color: rgb(239, 216, 101); width: 800px">
+    <form [formGroup]="AdminlogInForm">
+
+     <div class="adminlogin">
+        <!-- username name -->
+        <label for="exampleInputName" class="form-label mt-2">Enter Admin User Name</label>
+        <input style="width: 400px;"
+          name="uname"
+          formControlName="uname"
+          type="text"
+          class="form-control"
+          id="uname"
+          placeholder="User Name"
+          aria-describedby="emailHelp"
+        />
+  
+        <!-- username name validation -->
+        <div
+          *ngIf="
+            this.AdminlogInForm.get('uname')?.touched &&
+            this.AdminlogInForm.get('uname')?.errors
+          "
+          class="mt-2 text-danger"
+        >
+          Please Enter A Username
+        </div>
+  
+        <!--password  -->
+        <label for="exampleInputPassword1" class="form-label mt-3"
+          >Enter Admin Password</label
+        >
+        <input style="width: 400px;"
+          name="pswd"
+          formControlName="pswd"
+          type="password"
+          placeholder="Password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+  
+        <!-- passord validation -->
+        <div
+          *ngIf="
+            this.AdminlogInForm.get('pswd')?.touched &&
+            this.AdminlogInForm.get('pswd')?.errors
+          "
+          class="mt-2 text-danger"
+        >
+          Please Enter Your Password
+        </div>
+        
+              <div
+                class="mt-4"
+              >
+                <button
+                  type="submit"
+                  routerLink="/dashboard"
+                  class="btn ms-5"
+                  style="background-color: green; color: white"
+                >
+                  Log-in
+                </button>
+                <button routerLink="/" class="btn ms-5" style="background-color: red; color: white">
+                  Cancel
+                </button>
+              </div>
+     </div>
+    </form>
+    <div class="adminpic d-flex align-items-center ms-5">
+      <img src="../../assets/How-to-develop-a-bike-taxi-app_Antino-2-removebg-preview.png" />
+    </div>
+  </div>
+</div>

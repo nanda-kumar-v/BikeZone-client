@@ -1,0 +1,95 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<!-- about us  -->
+
+<div class="page-2">
+  <div class="page-2-bg">
+    <div class="page-2-images">
+      <div class="page-2-img-1">
+        <img src="../../assets/demo block.svg" />
+        <img src="../../assets/rapido man.webp" id="img-1" />
+        <h1></h1>
+      </div>
+
+      <div class="page-2-img-2">
+        <h1></h1>
+        <img src="../../assets/rapido bike and man.webp" />
+      </div>
+    </div>
+  </div>
+
+  <!-- page two text -->
+
+  <div class="page-2-text">
+    <h1>Know Us Better</h1>
+    <p>
+      We have crossed 10 million happy customers <br />
+      and 100 million rides. Rapido is here to<br />
+      revolutionize intra-city travel as we bring you<br />
+      redefined comfort & convenience with our<br />
+      disruptive service model.
+    </p>
+    <p class="collapse" id="collapseExample1">
+      We're #1 choice of 10 Million people because we're the solution of India's
+      intra-city commuting problems. With assured safety, we also provide
+      economically priced rides.
+    </p>
+    <button (click)="toggler1()" type="button" data-bs-toggle="collapse"
+    data-bs-target="#collapseExample1"
+    aria-expanded="false"
+    aria-controls="collapseExample1">
+      Know <span *ngIf="!toggleknow">more</span
+      ><span *ngIf="toggleknow">less</span>
+    </button>
+  </div>
+</div>
+
+<!-- rapido business solution -->
+
+<div class="page-6">
+  <div class="page-6-text">
+    <h1>BikeZone Business Solutions</h1>
+    <p>
+      Get onboard with BikeZone B2B services to earn <br />
+      more while you deliver. With highly reliable deliveries<br />
+      and a strong customer base, we are one of the fastest<br />
+      growing networks in the country. Sign up as BikeZone<br />
+      Partner for on-time services.
+    </p>
+    <p class="collapse" id="collapseExample2">
+      BikeZone has come a long way ever since its inception <br />
+      in 2015. With a lot of hardwork and perseverance <br />
+      we have made a place for ourselves in the market. <br />
+      As a brand and as a service, it is our constant <br />
+      endeavour to redefine ourselves.
+    </p>
+    <button (click)="toggler2()" type="button" data-bs-toggle="collapse"
+    data-bs-target="#collapseExample2"
+    aria-expanded="false"
+    aria-controls="collapseExample2">
+      Read <span *ngIf="!toggleread">more</span
+      ><span *ngIf="toggleread">less</span>
+    </button>
+  </div>
+
+  <div class="page-6-bg">
+    <div class="page-6-images">
+      <div class="page-6-image1">
+        <img src="../../assets/page 6 helmet bike.png" id="page-6" />
+        <h2></h2>
+      </div>
+
+      <div class="page-6-image2">
+        <h2></h2>
+        <img src="../../assets/page 6 Rapido4business2.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <app-footer></app-footer>
+</footer>

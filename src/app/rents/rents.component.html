@@ -1,0 +1,332 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<!-- rent page -->
+
+<div class="safety-page">
+  <div>
+    <h1>Fair Rent Fair Bikes</h1>
+    <p>
+      BikeZone is one of the most trusted Bike rental <br />
+      services in Indian Market, the top bike comapany <br />
+      dealership in India, promotes it. The rent-a-bike <br />
+      service provider offers an outstanding model and <br />
+      wide variety of vehicle options at most affordable rates.
+    </p>
+
+    <div class="safety-btn">
+      <button data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+        Log-in
+      </button>
+      <button
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop1"
+        id="black-btn"
+      >
+        Sign-up
+      </button>
+    </div>
+  </div>
+  <div class="safety-img">
+    <img
+      src="../../assets/bike-rents.png"
+      height="500px"
+      width="650px"
+      alt="s-img"
+    />
+  </div>
+</div>
+
+<!-- sign-up Modal -->
+
+<div
+  class="modal fade"
+  id="staticBackdrop1"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(24, 24, 106)">
+        <h1
+          class="modal-title fs-5"
+          style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            color: white;
+          "
+          id="staticBackdropLabel"
+        >
+          SIGN - UP
+        </h1>
+        <div class="signimg">
+          <img
+            class="signupimg"
+            src="../../assets/rapido logo.png"
+            height="50px"
+            width="100px"
+          />
+        </div>
+        <button
+          type="button"
+          class="closebtn" 
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ><i class="fa-solid fa-rectangle-xmark" style="color: #e00b0b;"></i></button>
+      </div>
+      <div class="modal-body" style="background-color: rgb(239, 216, 101)">
+        <form [formGroup]="signUpForm">
+          <!-- phone-number. -->
+          <label class="form-label">Phone Number</label>
+          <input
+            name="phone"
+            formControlName="phone"
+            type="text"
+            class="form-control"
+            id="phone-number"
+            placeholder=" Enter Phone number"
+          />
+
+          <!-- phone number validation -->
+          <div
+            *ngIf="
+              this.signUpForm.get('phone')?.touched &&
+              this.signUpForm.get('phone')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter A Valid Phone Number
+          </div>
+
+          <!-- email -->
+          <label for="exampleInputName" class="form-label mt-2">Email</label>
+          <input
+            name="email"
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder=" Enter Your Email"
+            aria-describedby="emailHelp"
+          />
+
+          <!-- email validation -->
+          <div
+            *ngIf="
+              this.signUpForm.get('email')?.touched &&
+              this.signUpForm.get('email')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter A Valid Email
+          </div>
+
+          <!-- username name -->
+          <label for="exampleInputName" class="form-label mt-2"
+            >User Name</label
+          >
+          <input
+            name="uname"
+            formControlName="uname"
+            type="text"
+            class="form-control"
+            id="uname"
+            placeholder=" Enter Your User Name"
+            aria-describedby="emailHelp"
+          />
+
+          <!-- username name validation -->
+          <div
+            *ngIf="
+              this.signUpForm.get('uname')?.touched &&
+              this.signUpForm.get('uname')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter A Username
+          </div>
+
+          <!--password  -->
+          <label for="exampleInputPassword1" class="form-label mt-2"
+            >Password</label
+          >
+          <input
+            name="pswd"
+            formControlName="pswd"
+            type="password"
+            placeholder="Enter You Password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+
+          <!-- passord validation -->
+          <div
+            *ngIf="
+              this.signUpForm.get('pswd')?.touched &&
+              this.signUpForm.get('pswd')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter Your Password
+          </div>
+        </form>
+        <div
+          class="modal-footer justify-content-center mt-4"
+          style="background-color: rgb(24, 24, 106)"
+        >
+          <p
+            style="
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                sans-serif;
+              color: white;
+            "
+          >
+            Already A User ? Click Here To
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
+              >Login</a
+            >
+          </p>
+          <button
+            type="submit"
+            class="btn"
+            style="background-color: green; color: white"
+          >
+            Sign-up
+          </button>
+          <button class="btn" style="background-color: red; color: white">
+            Cancel
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- log-in modal -->
+
+<div
+  class="modal fade"
+  id="staticBackdrop2"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(24, 24, 106)">
+        <h1
+          class="modal-title fs-5"
+          style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            color: white;
+          "
+          id="staticBackdropLabel"
+        >
+          LOG - IN
+        </h1>
+        <div class="logimg">
+          <img
+            class="loginimg"
+            src="../../assets/rapido logo.png"
+            height="50px"
+            width="100px"
+          />
+        </div>
+        <button
+        type="button"
+        class="closebtn" 
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ><i class="fa-solid fa-rectangle-xmark" style="color: #e00b0b;"></i></button>
+      </div>
+      <div class="modal-body" style="background-color: rgb(239, 216, 101)">
+        <form [formGroup]="logInForm">
+          <!-- username name -->
+          <label for="exampleInputName" class="form-label mt-2"
+            >User Name</label
+          >
+          <input
+            name="uname"
+            formControlName="uname"
+            type="text"
+            class="form-control"
+            id="uname"
+            placeholder=" Enter Your User Name"
+            aria-describedby="emailHelp"
+          />
+
+          <!-- username name validation -->
+          <div
+            *ngIf="
+              this.logInForm.get('uname')?.touched &&
+              this.logInForm.get('uname')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter A Username
+          </div>
+
+          <!--password  -->
+          <label for="exampleInputPassword1" class="form-label mt-2"
+            >Password</label
+          >
+          <input
+            name="pswd"
+            formControlName="pswd"
+            type="password"
+            placeholder="Enter You Password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+
+          <!-- passord validation -->
+          <div
+            *ngIf="
+              this.logInForm.get('pswd')?.touched &&
+              this.logInForm.get('pswd')?.errors
+            "
+            class="mt-2 text-danger"
+          >
+            Please Enter Your Password
+          </div>
+        
+          <div
+            class="modal-footer justify-content-center mt-4"
+            style="background-color: rgb(24, 24, 106)"
+          >
+            <p
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                  sans-serif;
+                color: white;
+              "
+            >
+              Are You A New User ? Click To
+              <a data-bs-toggle="modal" data-bs-target="#staticBackdrop1"
+                >Register</a
+              >
+            </p>
+            <button
+              type="submit"
+              routerLink="/rent-dashboard"
+              class="btn"
+              style="background-color: green; color: white"
+            >
+              Log-in
+            </button>
+            <button class="btn" style="background-color: red; color: white">
+              Cancel
+            </button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

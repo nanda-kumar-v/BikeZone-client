@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+  }
+  
+  .navbar img {
+    width: 100px;
+  }
+  
+ 
+  .navbar button {
+    padding: 10px 20px;
+    border-radius: 20px 15px 0px 20px;
+    font-size: 16px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+  }
+
+  .closebtn{
+    border: none;
+    padding: 0;
+    background-color: rgb(24, 24, 106);
+    font-size:30px;
+  }
+  
+
+
+  
+
